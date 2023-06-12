@@ -1,0 +1,19 @@
+<p>read works!</p>
+<ul class="list">
+    <li *ngFor="let item of lists">
+      <span class="span">{{ item.id }}</span>
+      name: {{ item.name }}
+      <button (click)="editTask(item)">edit</button>
+    </li>
+  </ul>
+  
+  <div *ngIf="isEditing">
+    <input type="text" placeholder="name" [(ngModel)]="editedTaskName" />
+    <button (click)="saveTask()">Save</button>
+  </div>
+  
+  <div *ngIf="!isEditing">
+    <input type="text" placeholder="name" #taskName />
+    <button (click)="addTask(taskName.value)">Add</button>
+  </div>
+  

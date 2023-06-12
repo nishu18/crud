@@ -1,0 +1,60 @@
+<!-- <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
+    <input type="text" placeholder="name" ngModel required name="name" #nameInput="ngModel">
+    <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="error-message">Name is required</div>
+
+
+    <input type="text" placeholder="description" ngModel required name="description">
+    <button type="submit" [disabled]="!myForm.valid">create</button>
+
+</form>
+
+
+<div *ngIf="myForm.submitted">
+    <h3>Form Submitted!</h3>
+    <p>Name: {{ myForm.value.name }}  </p>
+    <p>Message: {{ myForm.value.description }}</p>
+
+    <button [routerLink]="['/update']">edit</button>
+    <button>delete</button>
+  </div> -->
+
+  <!-- <div>
+    <input type="text" placeholder="Add task"  #task />
+    <button (click)="addTask(task.value)">Addd</button>
+    <ul class="list" *ngFor="let item of lists"  >
+        <li>      <span class="span">{{ item.id }}</span> 
+    
+             {{item.name}}
+             <button [routerLink]="['/update']">Edit</button>
+              <button (click)="deleteTask(item.id)">Delete</button> -->
+            <!-- </li>
+
+    </ul>
+    
+    </div>  -->
+    <div>
+        <input type="text" placeholder="name" #taskName />
+        <input type="text" placeholder="email" #taskEmail />
+
+        <input type="text" placeholder="phone" #taskPhone />
+        <input type="text" placeholder="location" #taskLocation />
+
+
+  <button (click)="addTask(taskName.value, taskEmail.value, taskPhone.value, taskLocation.value)">Add</button>
+        <ul class="list" *ngFor="let item of lists">
+          <li>
+            <!-- <span class="span">{{ item.id }}</span> -->
+           name: {{ item.name }}
+            <br>
+            Email: {{ item.email }}
+            <br>
+            Phone: {{ item.phone }}
+            <br>
+            Location: {{ item.location }}
+            <br>
+            <button [routerLink]="['/update',  item.name, item.email, item.phone, item.location]">Edit</button>
+            <button (click)="deleteTask(item.id)">Delete</button>
+          </li>
+        </ul>
+      </div>
+      

@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+    align-items: center;
+    background-color: #060822;
+    height: 100%; 
+    width: 100%;
+  }
+  
+.add{
+    display: flex;
+    gap: 5px;
+}
+.img{
+    width: 20%;
+    margin-top: 40px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

@@ -1,0 +1,31 @@
+<!-- <p>edit works!</p>
+<div>
+    <div>
+    <div>id: </div>
+</div>
+<div>
+    <label>name :</label>
+</div>
+<button>Save</button>
+<button >Back</button>
+</div> -->
+
+<p>edit works!</p>
+<div>
+    <!-- <div>
+        <div>{{ itemName }}</div> 
+      </div> -->
+
+  <div>
+    <label>Name:</label> 
+    <input type="text" [(ngModel)]="itemName" placeholder="item name">
+    <input type="text" [(ngModel)]="itemEmail" placeholder="item email">
+
+    <input type="text" [(ngModel)]="itemPhone" placeholder="item phone">
+
+    <input type="text" [(ngModel)]="itemLocation" placeholder="item Location">
+
+  </div>
+  <button (click)="saveItem()">Save</button> 
+  <button (click)="goBack()">Back</button> 
+</div>

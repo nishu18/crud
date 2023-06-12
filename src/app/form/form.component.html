@@ -1,0 +1,29 @@
+<!-- <h2>Template-Driven Form</h2>
+
+<form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" ngModel required #nameInput="ngModel">
+    <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="error-message">Name is required</div>
+
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required email>
+  </div>
+
+  <div>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" ngModel></textarea>
+  </div>
+
+  <button type="submit" [disabled]="myForm.valid">Submit</button>
+</form>
+
+<div *ngIf="myForm.submitted">
+  <h3>Form Submitted!</h3>
+  <p>Name: {{ myForm.value.name }}</p>
+  <p>Email: {{ myForm.value.email }}</p>
+  <p>Message: {{ myForm.value.message }}</p>
+</div> -->

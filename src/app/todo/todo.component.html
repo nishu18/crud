@@ -1,0 +1,52 @@
+<div class="container">
+  <img src="https://cdn.pixabay.com/photo/2016/03/31/19/50/checklist-1295319_1280.png" class="img" alt="">
+  <div class="list">
+    <div class="add" *ngIf="!isEditing">
+      <mat-form-field>
+        <mat-label>Add Task</mat-label>
+        <input matInput  [(ngModel)]="taskName">
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="addTask()" style="    height: 56px;
+      width: 94px;">Add</button>
+    </div>
+    <div *ngIf="isEditing">
+    <mat-form-field>
+
+      <mat-label>update</mat-label>
+      <input matInput #task [(ngModel)]="editedTaskName">
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="saveTask()" style="    height: 56px;
+    width: 94px; margin-bottom: 19px;">Save</button>
+
+    </div>
+  </div>
+
+
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let item of list" style="background: wheat ;margin: 5px;    padding: 20px 93px; display: flex;">
+
+
+      <div style="color:black ">{{item.id}}
+      {{item.name}}
+      </div>
+
+
+      <button mat-icon-button color="primary" aria-label="Edit" (click)="editTask(item)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" aria-label="Delete" (click)="deleteTask(item.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+
+    </mat-list-item>
+
+
+  </mat-list>
+</div>
+
+
+
+
+
+
+
